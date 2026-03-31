@@ -118,6 +118,11 @@
         width: 88%;
       }
 
+      .result-image-medium,
+      .caption-medium {
+        width: 72%;
+      }
+
       code {
         padding: 0.15rem 0.4rem;
         border-radius: 999px;
@@ -155,11 +160,11 @@
 
         <div class="result-card">
           <img
-            class="result-image result-image-wide"
+            class="result-image result-image-medium"
             src="3dify-2.jpg"
             alt="OOD condition mismatch results"
           />
-          <p class="caption caption-wide">
+          <p class="caption caption-medium">
             We intentionally mismatch the input conditions by combining voxels
             from one object with an image from another, creating an
             out-of-distribution setting since training uses matched voxel-image
