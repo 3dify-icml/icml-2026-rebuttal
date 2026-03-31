@@ -22,8 +22,6 @@
       body {
         margin: 0;
         min-height: 100vh;
-        display: grid;
-        place-items: center;
         padding: 24px;
         font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
         background:
@@ -33,7 +31,8 @@
       }
 
       main {
-        width: min(680px, 100%);
+        width: min(960px, 100%);
+        margin: 0 auto;
         padding: 40px 32px;
         border: 1px solid var(--border);
         border-radius: 24px;
@@ -55,11 +54,55 @@
         line-height: 1.05;
       }
 
+      h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.15;
+      }
+
       p {
         margin: 0 0 12px;
         color: var(--muted);
         font-size: 1.05rem;
         line-height: 1.7;
+      }
+
+      .intro {
+        margin-bottom: 32px;
+      }
+
+      .result {
+        padding-top: 28px;
+        border-top: 1px solid var(--border);
+      }
+
+      .result-card {
+        margin-top: 20px;
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: #fcfcfd;
+      }
+
+      .pdf-frame {
+        width: 100%;
+        height: min(72vw, 960px);
+        min-height: 560px;
+        border: 0;
+        border-radius: 12px;
+        background: #e4e7ec;
+      }
+
+      .pdf-link {
+        display: inline-block;
+        margin-top: 14px;
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .pdf-link:hover {
+        text-decoration: underline;
       }
 
       code {
@@ -73,11 +116,31 @@
   </head>
   <body>
     <main>
-      <p class="eyebrow">GitHub Pages</p>
-      <h1>Hello, ICML rebuttal.</h1>
-      <p>This site is live and ready for qualitative visual results.</p>
-      <p>Repository owner: <code>3dify-icml</code></p>
-      <p>Replace this file with your actual rebuttal figures whenever you are ready.</p>
+      <section class="intro">
+        <p class="eyebrow">GitHub Pages</p>
+        <h1>ICML rebuttal visual results</h1>
+        <p>Repository owner: <code>3dify-icml</code></p>
+      </section>
+
+      <section class="result">
+        <h2>Comparison with MVAR</h2>
+        <p>
+          We ran a small qualitative comparison between our model and MVAR. Since
+          MVAR is fundamentally a multi-view generation model, we used Trellis
+          pipeline to reconstruct the meshes from multi-views.
+        </p>
+
+        <div class="result-card">
+          <embed
+            class="pdf-frame"
+            src="3dify-1.pdf"
+            type="application/pdf"
+          />
+          <a class="pdf-link" href="3dify-1.pdf" target="_blank" rel="noopener">
+            Open 3dify-1.pdf
+          </a>
+        </div>
+      </section>
     </main>
   </body>
 </html>
