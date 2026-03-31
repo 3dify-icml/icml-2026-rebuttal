@@ -88,7 +88,6 @@
       }
 
       .result-image {
-        width: 50%;
         max-width: 100%;
         border-radius: 12px;
         display: block;
@@ -98,7 +97,20 @@
       .caption {
         margin-top: 14px;
         margin-bottom: 0;
-        text-align: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .result-image-narrow,
+      .caption-narrow {
+        width: 50%;
+      }
+
+      .result-image-wide,
+      .caption-wide {
+        width: 88%;
       }
 
       code {
@@ -121,14 +133,57 @@
 
         <div class="result-card">
           <img
-            class="result-image"
+            class="result-image result-image-narrow"
             src="3dify-1.png"
             alt="Qualitative comparison with MVAR"
           />
-          <p class="caption">
+          <p class="caption caption-narrow">
             We ran a small qualitative comparison between our model and MVAR.
             Since MVAR is fundamentally a multi-view generation model, we used
             Trellis pipeline to reconstruct the meshes from multi-views.
+          </p>
+        </div>
+      </section>
+
+      <section class="result">
+        <h2>2. OOD condition mismatch</h2>
+
+        <div class="result-card">
+          <img
+            class="result-image result-image-wide"
+            src="3dify-2.jpg"
+            alt="OOD condition mismatch results"
+          />
+          <p class="caption caption-wide">
+            We intentionally mismatch the input conditions by combining voxels
+            from one object with an image from another, creating an
+            out-of-distribution setting since training uses matched voxel-image
+            pairs. In row 1, dog voxels paired with a dinosaur image produce a
+            dog with dinosaur-like scales. In row 2, the same dog voxels paired
+            with a cubic cow image generate a cubic-styled dog. Similarly, in
+            row 3, cat voxels combined with the cubic cow image produce a
+            cubic-styled cat. These results show that our framework handles
+            condition mismatch and naturally supports style transfer.
+          </p>
+        </div>
+      </section>
+
+      <section class="result">
+        <h2>3. Failure cases</h2>
+
+        <div class="result-card">
+          <img
+            class="result-image result-image-wide"
+            src="3dify-3.jpg"
+            alt="Failure cases"
+          />
+          <p class="caption caption-wide">
+            For some conditions, the model fails to capture exact details, such
+            as the bicycle wheel details in columns 1-2. It also struggles to
+            model very high-frequency details due to resolution limits, such as
+            the leaves of the tree in columns 3-4. In some cases, it also misses
+            text-related details, such as the four missing strings on the violin
+            in columns 5-6.
           </p>
         </div>
       </section>
