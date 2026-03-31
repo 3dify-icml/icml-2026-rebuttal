@@ -84,16 +84,14 @@
         background: #fcfcfd;
       }
 
-      .pdf-frame {
+      .result-image {
         width: 100%;
-        height: min(72vw, 960px);
-        min-height: 560px;
-        border: 0;
         border-radius: 12px;
+        display: block;
         background: #e4e7ec;
       }
 
-      .pdf-link {
+      .asset-link {
         display: inline-block;
         margin-top: 14px;
         color: var(--accent);
@@ -101,7 +99,7 @@
         text-decoration: none;
       }
 
-      .pdf-link:hover {
+      .asset-link:hover {
         text-decoration: underline;
       }
 
@@ -129,13 +127,13 @@
         </p>
 
         <div class="result-card">
-          <embed
-            class="pdf-frame"
-            src="3dify-1.pdf"
-            type="application/pdf"
+          <img
+            class="result-image"
+            src="3dify-1.png"
+            alt="Qualitative comparison with MVAR"
           />
-          <a class="pdf-link" href="3dify-1.pdf" target="_blank" rel="noopener">
-            Open 3dify-1.pdf
+          <a class="asset-link" href="3dify-1.png" target="_blank" rel="noopener">
+            Open 3dify-1.png
           </a>
         </div>
       </section>
