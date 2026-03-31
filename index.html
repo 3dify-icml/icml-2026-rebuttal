@@ -95,16 +95,10 @@
         margin: 0 auto;
       }
 
-      .asset-link {
-        display: inline-block;
+      .caption {
         margin-top: 14px;
-        color: var(--accent);
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .asset-link:hover {
-        text-decoration: underline;
+        margin-bottom: 0;
+        text-align: center;
       }
 
       code {
@@ -123,12 +117,7 @@
       </section>
 
       <section class="result">
-        <h2>Comparison with MVAR</h2>
-        <p>
-          We ran a small qualitative comparison between our model and MVAR. Since
-          MVAR is fundamentally a multi-view generation model, we used Trellis
-          pipeline to reconstruct the meshes from multi-views.
-        </p>
+        <h2>1. Comparison with MVAR</h2>
 
         <div class="result-card">
           <img
@@ -136,9 +125,11 @@
             src="3dify-1.png"
             alt="Qualitative comparison with MVAR"
           />
-          <a class="asset-link" href="3dify-1.png" target="_blank" rel="noopener">
-            Open 3dify-1.png
-          </a>
+          <p class="caption">
+            We ran a small qualitative comparison between our model and MVAR.
+            Since MVAR is fundamentally a multi-view generation model, we used
+            Trellis pipeline to reconstruct the meshes from multi-views.
+          </p>
         </div>
       </section>
     </main>
