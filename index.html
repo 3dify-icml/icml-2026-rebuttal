@@ -67,6 +67,12 @@
         line-height: 1.15;
       }
 
+      h3 {
+        margin: 0 0 14px;
+        font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+        line-height: 1.2;
+      }
+
       p {
         margin: 0 0 12px;
         color: var(--muted);
@@ -194,6 +200,52 @@
             the leaves of the tree in columns 3-4. In some cases, it also misses
             text-related details, such as the four missing strings on the violin
             in columns 5-6.
+          </p>
+        </div>
+      </section>
+
+      <section class="result">
+        <h2>4. Dataset audit</h2>
+
+        <div class="result-card">
+          <h3>TOY4K Dataset Analysis -- 5 nearest neighbours</h3>
+          <img
+            class="result-image result-image-wide"
+            src="toy4k.jpg"
+            alt="TOY4K dataset analysis with five nearest neighbours"
+          />
+          <p class="caption caption-wide">
+            We analyzed our held-out dataset, TOY4K, by comparing it with our
+            larger 4 million-sample dataset in CLIP embedding space. Using the
+            CLIP L/14 model, we extracted embeddings for all samples and
+            measured similarity with cosine similarity. For each TOY4K sample,
+            we retrieved its five nearest neighbors from the larger dataset
+            based on cosine similarity. We found that the nearest neighbors for
+            TOY4K queries were often not highly similar. This suggests that
+            TOY4K is neither trivially duplicated nor closely matched within
+            the larger dataset, indicating that the model's performance on
+            TOY4K is unlikely to be driven by overfitting.
+          </p>
+        </div>
+
+        <div class="result-card">
+          <h3>GSO Dataset Analysis -- 5 nearest neighbours</h3>
+          <img
+            class="result-image result-image-wide"
+            src="gso.jpg"
+            alt="GSO dataset analysis with five nearest neighbours"
+          />
+          <p class="caption caption-wide">
+            We analyzed our held-out dataset, GSO, by comparing it with our
+            larger 4 million-sample dataset in CLIP embedding space. Using the
+            CLIP L/14 model, we extracted embeddings for all samples and
+            measured similarity with cosine similarity. For each GSO sample, we
+            retrieved its five nearest neighbors from the larger dataset based
+            on cosine similarity. We found that the nearest neighbors for GSO
+            queries were often not highly similar. This suggests that GSO is
+            neither trivially duplicated nor closely matched within the larger
+            dataset, indicating that the model's performance on GSO is unlikely
+            to be driven by overfitting.
           </p>
         </div>
       </section>
