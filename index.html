@@ -88,6 +88,7 @@
         padding-top: 28px;
         padding-bottom: 22px;
         border-top: 1px solid var(--border);
+        scroll-margin-top: 24px;
       }
 
       .result-card {
@@ -144,7 +145,7 @@
         <h1>ICML rebuttal visual results</h1>
       </section>
 
-      <section class="result">
+      <section class="result" id="comparison-with-mvar">
         <h2>1. Comparison with MVAR</h2>
 
         <div class="result-card">
@@ -161,7 +162,7 @@
         </div>
       </section>
 
-      <section class="result">
+      <section class="result" id="ood-condition-mismatch">
         <h2>2. OOD condition mismatch</h2>
 
         <div class="result-card">
@@ -184,7 +185,7 @@
         </div>
       </section>
 
-      <section class="result">
+      <section class="result" id="failure-cases">
         <h2>3. Failure cases</h2>
 
         <div class="result-card">
@@ -204,10 +205,10 @@
         </div>
       </section>
 
-      <section class="result">
+      <section class="result" id="dataset-analysis">
         <h2>4. Dataset audit</h2>
 
-        <div class="result-card">
+        <div class="result-card" id="toy4k-dataset-analysis">
           <h4>TOY4K Dataset Analysis (5 nearest neighbours)</h4>
           <img
             class="result-image result-image-wide"
@@ -228,7 +229,7 @@
           </p>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" id="gso-dataset-analysis">
           <h4>GSO Dataset Analysis (5 nearest neighbours)</h4>
           <img
             class="result-image result-image-wide"
